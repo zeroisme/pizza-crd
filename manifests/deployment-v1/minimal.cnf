@@ -1,0 +1,14 @@
+prompt             = no
+distinguished_name = req_dn
+x509_extensions = x509_ext
+
+[ req_dn ]
+commonName         = webhook.pizza-crd.svc
+
+[ x509_ext ]
+subjectAltName = @alt_names
+# You may need the next line to stop Firefox complaining:
+# basicConstraints = critical; CA:TRUE
+ 
+[alt_names]
+DNS.1 = webhook.pizza-crd.svc
